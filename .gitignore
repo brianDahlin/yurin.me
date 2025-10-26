@@ -1,0 +1,14 @@
+# Hugo build artifacts
+/public/
+/resources/_gen/
+/.hugo_build.lock
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# Node / misc
+node_modules/
+dist/
