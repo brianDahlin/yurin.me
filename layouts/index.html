@@ -1,0 +1,75 @@
+{{ define "main" }}
+<main class="mw8 center ph3 pv4">
+    <div class="flex-l">
+        <!-- Sidebar -->
+        <aside class="w-30-l w-100 pr4-l mb4">
+            {{ partial "langtogler.html" . }}
+
+            <h1 class="f2 mt0 mb2">
+                {{ if eq .Site.Language.Lang "ru" }}Юрин Артемий{{ else }}Yurin Artemiy{{ end }}
+            </h1>
+            <p class="gray mb3">M.Sс. Economics and Business<br>Finance University under the Government of the Russian
+                Federation</p>
+
+            <ul class="list pl0 lh-copy">
+                <li class="mb2 flex items-center">
+                    {{ readFile "static/icons/mail-symbol.svg" | safeHTML }}
+                    <a href="mailto:bonfun55@gmail.com" class="link dim blue ml2">bonfun55@gmail.com</a>
+                </li>
+
+                <li class="mb2 flex items-center">
+                    {{ readFile "static/icons/location-symbol.svg" | safeHTML }}
+                    <span class="ml2">ethereum ecosystem</span>
+                </li>
+            </ul>
+
+            <hr class="mv3">
+
+            <nav>
+                <ul class="list pl0 lh-copy">
+                    <li class="mb2">
+                        <a class="link dim dark-blue" href="{{ "/" | relURL }}">{{ i18n "home" }}</a>
+                    </li>
+                    <li class="mb2">
+                        <a class="link dim dark-blue" href="{{ "/publications/" | relURL }}">{{ i18n "publications"
+                            }}</a>
+                    </li>
+                    <li class="mb2">
+                        <a class="link dim dark-blue" href="{{ "/personal/" | relURL }}">{{ i18n "personal" }}</a>
+                    </li>
+
+                    <!-- Divider -->
+                    <li class="mv3">
+                        <hr class="ba b--black-10" style="border: none; border-top: 1px solid #ddd; width: 80%;">
+                    </li>
+
+                    <li class="mb2">
+                        <a class="link dim dark-blue" href="https://x.com/Yurin_sol" target="_blank"
+                            rel="noopener noreferrer">
+                            {{ i18n "blog" }}
+                        </a>
+                    </li>
+                    <li class="mb2">
+                        <a class="link dim dark-blue" href="https://debank.com/profile/0xb5030d8b3da80ba0110fa6cc6a3f33b285036c9e" target="_blank"
+                            rel="noopener noreferrer">
+                            {{ i18n "debank" }}
+                        </a>
+                    </li>
+                    <li class="mb2">
+                        <a class="link dim dark-blue" href="{{ "/cv.pdf" | relURL }}">{{ i18n "cv" }}</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <p class="f6 gray mt3">
+                {{ i18n "last_updated" }} {{ now.Format "Jan 2, 2006" }}
+            </p>
+        </aside>
+
+        <!-- Main content -->
+        <article class="w-70-l w-100 lh-copy f4 measure">
+            {{ .Content }}
+        </article>
+    </div>
+</main>
+{{ end }}

@@ -1,0 +1,21 @@
+baseURL = "https://yurin.me/"
+title = "Yurin.eth"
+theme = "ananke"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false  # en будет в корне, ru — в /ru/
+enableRobotsTXT = true
+
+[languages]
+
+  [languages.en]
+    languageName = "English"
+    weight = 1
+
+  [languages.ru]
+    languageName = "Русский"
+    weight = 2
+
+[params]
+  author = "Yurin Artemiy"
+  description = "Ph.D. in Computer Science"
+  custom_css = ["css/custom.css"]

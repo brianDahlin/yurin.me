@@ -1,0 +1,20 @@
+home:
+  other: Главная
+publications:
+  other: Публикации
+personal:
+  other: Личное
+blog:
+  other: X
+debank:
+  other: DeBank
+cv:
+  other: Резюме
+email:
+  other: Почта
+location:
+  other: Локация
+about_me:
+  other: Обо мне
+last_updated:
+  other: Обновлено

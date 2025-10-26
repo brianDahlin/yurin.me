@@ -1,0 +1,9 @@
+<nav class="mb3">
+  {{- range .Sites -}} {{- if eq .Language.Lang $.Site.Language.Lang -}}
+  <span class="b mr2">{{ .Language.LanguageName }}</span>
+  {{- else -}}
+  <a class="link dim dark-blue mr2" href="{{ .Home.RelPermalink }}"
+    >{{ .Language.LanguageName }}</a
+  >
+  {{- end -}} {{- end -}}
+</nav>
